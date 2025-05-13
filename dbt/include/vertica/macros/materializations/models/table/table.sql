@@ -41,7 +41,7 @@
     {{ create_table_as(False, intermediate_relation, sql) }}
   {%- endcall %}
 
-  {% do persist_docs(target_relation, model) %
+  {% do persist_docs(target_relation, model) %}
 
   -- cleanup
   {% if old_relation is not none %}
